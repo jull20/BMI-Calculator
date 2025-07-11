@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Inter Regular";
+    src: url(../assets/fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter Semi Bold";
+    src: url(../assets/fonts/static/Inter-SemiBold.ttf);
+}
+
+$white:    #FFFFFF;
+$black:    #000000;
+$grey-300: #ACC1DE;
+$grey-500: #5E6E85;
+$blue-100: #E1E7FE;
+$blue-300: #B3D3F1;
+$blue-500: #345FF6;
+$blue-900: #253347;
+$gradient: linear-gradient(#D6FCFE, #D6E6FE);
+$bold:     700;
+$semiBold: 600;
+$regular:  400;
+
+@mixin text-preset-1{
+    font-family:    "Inter Semi Bold";
+    font-size:      6.4rem;
+    font-weight:    600;
+    line-height:    110%;
+    letter-spacing: -5%;
+}
+@mixin text-preset-2{
+    font-family:    "Inter Semi Bold";
+    font-size:      4.8rem;
+    font-weight:    600;
+    line-height:    110%;
+    letter-spacing: -5%;
+}
+@mixin text-preset-3{
+    font-family:    "Inter Semi Bold";
+    font-size:      3.24rem;
+    font-weight:    600;
+    line-height:    110%;
+    letter-spacing: -5%;
+}
+@mixin text-preset-4{
+    font-family:    "Inter Semi Bold";
+    font-size:      2.4rem;
+    font-weight:    600;
+    line-height:    120%;
+    letter-spacing: -5%;
+}
+@mixin text-preset-5{
+    font-family:    "Inter Semi Bold";
+    font-size:      2rem;
+    font-weight:    600;
+    line-height:    120%;
+    letter-spacing: -5%;
+}
+@mixin text-preset-6($weight){
+    @if($weight == 600) {font-family: "Inter Semi Bold";}
+    @if($weight == 400) {font-family: "Inter Regular";  }
+    font-size:      1.6rem;
+    font-weight:    $weight;
+    line-height:    150%;
+    letter-spacing: 0;
+}
+@mixin text-preset-7($weight){
+    @if($weight == 600) {font-family: "Inter Semi Bold";}
+    @if($weight == 400) {font-family: "Inter Regular";  }
+    font-size:      1.4rem;
+    font-weight:    $weight;
+    line-height:    150%;
+    letter-spacing: 0;
+}
+@mixin flex($direction, $main-axis, $cross-axis){
+    display:         flex;
+    flex-direction:  $direction;
+    justify-content: $main-axis;
+    align-items:     $cross-axis;
+}
