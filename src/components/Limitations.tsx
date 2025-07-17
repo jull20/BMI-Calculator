@@ -44,7 +44,7 @@ const cardData: cardDataType[] = [
     }
 ]
 
-function Card({img, title, children}: {[k:string]:string}){
+function Card({img, title, children}: cardDataType){
     return(
         <div className={"card " + title.toLowerCase()}>
             <div className="card__title-wrapper">

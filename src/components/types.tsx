@@ -22,7 +22,8 @@ export type inputRadioType = {
 export type cardDataType = {
     img: string,
     title: string, 
-    description: string
+    description?: string,
+    children?: string,
 };
 
 export type formDataType = { cm: number, kg: number } | { ft: number, in: number, st: number, lbs: number }
