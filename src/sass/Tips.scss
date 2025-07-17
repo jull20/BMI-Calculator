@@ -1,0 +1,72 @@
+.tips{
+    position: relative;
+    @include flex(column, flex-start, center);
+}
+.tips__wrapper{
+    width: 100%;
+    @include flex(column, flex-start, flex-start);
+    gap: 4rem 3.2rem;
+    @media screen and (max-width: 450px){
+        padding-top:    4.8rem;
+        padding-bottom: 4.8rem;
+    }
+    @media screen and (min-width: 450px) and (max-width: 1024px){
+        padding-top:    5rem;
+        padding-bottom: 5rem;
+    }
+    @media screen and (min-width: 1024px){
+        @include flex(row, center, center);
+        margin-top:    9.6rem;
+        margin-bottom: 9.6rem;
+    }
+    z-index: 100;
+}
+.tip{
+    width: 100%;
+    @include flex(column, flex-start, flex-start);
+    gap: 4.8rem 4rem;
+    @media screen and (max-width: 450px){
+        gap: 3.2rem 0;
+    }
+    @media screen and (min-width: 450px) and (max-width: 1024px){
+        @include flex(row, flex-start, center);
+    }
+}
+.logo{
+    width: 6.4rem;
+    height: 6.4rem;
+    & img{
+    width: 6.4rem;
+    height: 6.4rem;
+    }
+}
+
+.tip__text-wrapper{
+    @include flex(column, flex-start, flex-start);
+    gap: 2.4rem 0;
+}
+.tip__title{
+    color: $blue-900;
+    @include text-preset-4;    
+}
+.tip__description{
+    color: $grey-500;
+    @include text-preset-6($regular);
+}
+.tips__gradient{
+    position: absolute;
+    width: 500%;
+    height: 100%;
+    background: $gradient-tips;
+    z-index: 1;
+    @media screen and (min-width: 1024px){
+        width: 100%;
+        border-radius: 3.5rem;
+        background: $gradient-tips2;
+    }
+}
+
+// @media screen and (min-width: 450px) and (max-width: 1024px){
+// }
+// @media screen and (min-width: 1024px){
+// }

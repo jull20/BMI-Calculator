@@ -1,0 +1,78 @@
+.results{
+    @include flex(row, space-between, center);
+    @media screen and (max-width: 550px){
+        @include flex(column, flex-start, center);
+        gap: 4.8rem 0;
+        padding-top:    0;
+        padding-bottom: 6rem;
+    }
+    @media screen and (min-width: 550px) and (max-width: 1024px){
+        gap: 0 7.2rem;
+        padding-top:    5.3rem;
+        padding-bottom: 9.6rem;
+    }
+    @media screen and (min-width: 1024px){
+        gap: 0 12.7rem;
+        margin-bottom: 8.6rem;
+    }
+}
+
+.results__img{
+    @media screen and (max-width: 550px){
+        & img{
+            position: relative;
+            left: -2.4rem;
+            width: calc(100% + 4.8rem);
+            @media screen and (min-width: 450px){
+                width: calc(100% + 8rem);
+                left: -4rem;
+            }
+        }
+    }
+    @media screen and (min-width: 550px) and (max-width: 1024px){
+        width: clamp(10rem, 37.2vw, 35rem);
+        & img{
+            position: relative;
+            left: -12rem;
+            width: clamp(37rem, 56.7vw, 50rem);
+        }
+    }
+    @media screen and (min-width: 1024px){
+        align-self: flex-end;
+        & img{
+            width: clamp(37rem, 39.2vw, 57rem);
+            padding-top: 5.2rem;
+        }
+    }
+}
+.results__wrapper{
+    @include flex(column, flex-start, flex-end);
+    gap: 3.6rem 0;
+    @media screen and (min-width: 1024px){
+        align-self: flex-start;
+    }
+}
+.results_line-img{
+    position: relative;
+    right: 3.5rem;
+    display: none;
+    @media screen and (min-width: 1024px){
+        display: block;
+    }
+}
+.results__text-wrapper{
+    @include flex(column, flex-start, flex-start);
+    gap: 3.2rem 0;
+}
+.results__title{
+    color: $blue-900;
+    @include text-preset-3;
+    @media screen and (min-width: 1024px){
+        @include text-preset-2;
+    }
+}
+.results__description{
+    color: $grey-500;
+    @include text-preset-6($regular);
+    text-wrap: balance;
+}

@@ -15,7 +15,9 @@ $blue-100: #E1E7FE;
 $blue-300: #B3D3F1;
 $blue-500: #345FF6;
 $blue-900: #253347;
-$gradient: linear-gradient(#D6FCFE, #D6E6FE);
+$gradient: linear-gradient(to right, #d6fcfe00, #D6E6FE);
+$gradient-tips: linear-gradient(to right, #d6fcfe00 45%, #D6E6FE);
+$gradient-tips2: linear-gradient(to right, #d6fcfe00 45%, #D6E6FE 250%);
 $bold:     700;
 $semiBold: 600;
 $regular:  400;
@@ -25,14 +27,14 @@ $regular:  400;
     font-size:      6.4rem;
     font-weight:    600;
     line-height:    110%;
-    letter-spacing: -5%;
+    letter-spacing: -.29rem;
 }
 @mixin text-preset-2{
     font-family:    "Inter Semi Bold";
     font-size:      4.8rem;
     font-weight:    600;
     line-height:    110%;
-    letter-spacing: -5%;
+    letter-spacing: -.29rem;
 }
 @mixin text-preset-3{
     font-family:    "Inter Semi Bold";

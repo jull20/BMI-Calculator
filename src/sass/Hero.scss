@@ -1,0 +1,91 @@
+.hero{
+    position: relative;
+    width: 100%;
+    @include flex(column, flex-start, center);
+}
+.hero__wrapper{
+    display: grid;
+    gap: 2.4rem 3.2rem;
+    justify-items: center;
+    @media screen and (max-width: 450px){
+        gap: 3.2rem 0;
+        padding-top:    3.2rem;
+        padding-bottom: 6.3rem;
+    }
+    @media screen and (min-width: 450px) and (max-width: 1024px){
+        gap: 4rem 0;
+        padding-top:    3.2rem;
+        padding-bottom: 5.3rem;
+    }
+    @media screen and (min-width: 1024px){
+        margin-top:    8.8rem;
+        margin-bottom: 10.5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        justify-items: flex-start;
+        align-items: center;
+        .logo{
+            grid-column: 1/3;
+            grid-row: 1/2;            
+        }
+        .hero__content{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .calculator{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+    }
+    z-index: 100;
+}
+.logo{
+    & img{
+        width: 4rem;
+        height: 4rem;
+        @media screen and (min-width: 1024px){
+            width:  6.4rem;
+            height: 6.4rem;
+        }
+    }
+}
+.hero__content{
+    @include flex(column, flex-start, center);
+    gap: 2.4rem 0;
+    text-align: center;
+    @media screen and (min-width: 1024px){
+        @include flex(column, flex-start, flex-start);
+        text-align: left;        
+    }
+}
+.hero__title{
+    color: $blue-900;
+    @include text-preset-2;
+    @media screen and (min-width: 1024px){
+        @include text-preset-1;
+    }
+}
+.hero__description{
+    color: $grey-500;
+    @include text-preset-6($regular);
+    text-wrap: balance;
+}
+.hero__gradient{
+    position: absolute;
+    border-radius: 0 0 3.5rem 3.5rem;
+    top: 0;
+    left: 0;
+    background: $gradient;
+    z-index: 0;
+    width: 100%;
+    @media screen and (max-width: 450px){
+        height: 64.9rem;
+    }
+    @media screen and (min-width: 450px) and (max-width: 1024px){
+        height: 64rem;
+    }
+    @media screen and (min-width: 1024px){
+        height: 100%;
+        width: clamp(78rem, 69.6vw, 160rem);
+    }
+}
